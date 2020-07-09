@@ -4,7 +4,7 @@
 
 class maxHeap {
   constructor() {
-    this.values = [69, 4, 20, 1, 3, 2, 6];
+    this.values = [];
   }
 
   insert(val) {
@@ -12,7 +12,7 @@ class maxHeap {
 
     let idx = this.values.length - 1;
 
-    while (true) {
+    while (idx > 0) {
       let parentIdx = Math.floor((idx - 1) / 2);
       let parentVal = this.values[parentIdx];
       if (parentVal < this.values[idx]) {
@@ -32,12 +32,16 @@ class maxHeap {
     this.swap(0, this.values.length - 1, this.values);
 
     const oldRoot = this.values.pop();
-    
-    let followIdx = 0;
 
+    let followIdx = 0;
+    let length = this.values.length - 1;
     while (true) {
       let leftChildIdx = followIdx * 2 + 1;
       let rightChildIdx = leftChildIdx + 1;
+
+      if (leftChildIdx > length) break;
+      if (rightChildIdx > length) break;
+
       let whichChild =
         this.values[leftChildIdx] > this.values[rightChildIdx]
           ? leftChildIdx
@@ -58,8 +62,14 @@ class maxHeap {
 }
 
 let max = new maxHeap();
-// max.insert(55)
-max.extractMax();
+max.insert(2);
+max.insert(7);
+max.insert(4);
+max.insert(1);
+max.insert(8);
+max.insert(1);
+
 console.log(max.values);
 
-//12, 33, 67
+// //12, 33, 67
+// [2, 7, 4, 1, 8, 1];
