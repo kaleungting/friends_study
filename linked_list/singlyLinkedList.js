@@ -132,20 +132,20 @@ class SinglyLinkedList {
     return removed;
   }
 
-  reverse() {
-    let prev = null; //keep track of prev
-    let curr = this.head; //keep track of current
-    this.head = this.tail; //swap the head
-    this.tail = curr; //set tail = to the head
-    while (curr) {
-      //while we advance curr
-      let next = curr.next; //find the next
-      curr.next = prev; //set the next of the current, to equal to prev (reassigning pointer)
-      prev = curr; //advance prev pointer (reassign to curr)
-      curr = next; //advance the curr pointer
-    }
-    return this.head;
-  }
+  // reverse() {
+  //   let prev = null; //keep track of prev
+  //   let curr = this.head; //keep track of current
+  //   this.head = this.tail; //swap the head
+  //   this.tail = curr; //set tail = to the head
+  //   while (curr) {
+  //     //while we advance curr
+  //     let next = curr.next; //find the next
+  //     curr.next = prev; //set the next of the current, to equal to prev (reassigning pointer)
+  //     prev = curr; //advance prev pointer (reassign to curr)
+  //     curr = next; //advance the curr pointer
+  //   }
+  //   return this.head;
+  // }
 
   traverse() {
     let current = this.head;
@@ -155,14 +155,6 @@ class SinglyLinkedList {
     }
   }
 }
-
-let linkedList = new SinglyLinkedList();
-linkedList.push(1);
-linkedList.push(2);
-linkedList.push(3);
-linkedList.push(4);
-
-console.log(linkedList.reverse());
 
 // let prev = null; //keep track of prev
 // let curr = this.head; //keep track of current
@@ -180,3 +172,27 @@ console.log(linkedList.reverse());
 // //              p     c     n
 
 // return this.head;
+
+let linkedList = new SinglyLinkedList();
+linkedList.push(1);
+linkedList.push(2);
+linkedList.push(3);
+linkedList.push(4);
+
+var swapPairs = function (head) {
+  let node = new Node(-Infinity);
+  let current = node;
+  let first = head;
+  let second = head.next;
+  
+  while (current.next) {
+    current.next = second;
+    current = current.next;
+    current.next = first;
+    current = current.next;
+    first = first.next.next;
+    second = second.next.next;
+  }
+
+  return node.next;
+};
