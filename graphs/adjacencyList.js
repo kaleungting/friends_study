@@ -43,11 +43,46 @@ class Graph {
     dfsHelper(start);
     return result;
   }
+
+  dfsItr(start) {
+    let stack = [start];
+    let list = [];
+    let visited = {};
+
+    while (stack.length) {
+      let popped = stack.pop();
+      if (!visited[popped]) {
+        list.push(popped);
+        visited[popped] = true;
+        this.adjacencyList[popped].forEach((node) => {
+          stack.push(node);
+        });
+      }
+    }
+    return list;
+  }
+
+  bfs(start) {
+    let queue = [start];
+    let result = [];
+    let visited = {};
+
+    while (queue.length) {
+      let node = queue.shift();
+      if (!visited[node]) {
+        result.push(node);
+        visited[node] = true;
+
+        this.adjacencyList[node].forEach((neighbor) => queue.push(neighbor));
+      }
+    }
+    return result;
+  }
 }
 
 // let flights = {
 //   Tokyo: ["Dallas"],
-//   Dallas: ["Tokyo", "Aspen"],
+// Dallas: ["Tokyo", "Aspen"],
 //   Aspen: ["Dallas"],
 // };
 let g = new Graph();
@@ -67,3 +102,5 @@ g.addEdge("D", "F");
 g.addEdge("E", "F");
 
 console.log(g.dfsRecur("A"));
+console.log(g.dfsItr("A"));
+console.log(g.bfs("A"));
