@@ -243,3 +243,18 @@ function findingCommonAncestor(n1, n2) {
 
   return null;
 }
+
+function convertToAdjList(adjMatrix) {
+  return adjMatrix.map((a) =>
+    a.map((v, i) => (v ? i : -1)).filter((v) => v !== -1)
+  );
+}
+
+var testMatrix = [
+  [0, 1, 1, 1],
+  [1, 0, 0, 0],
+  [1, 0, 0, 0],
+  [1, 0, 0, 0],
+];
+
+console.log(convertToAdjList(testMatrix));
