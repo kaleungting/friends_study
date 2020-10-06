@@ -22,3 +22,38 @@ if not found after loop, return -1;
 
 
 */
+// [2,3,4,5,6,0,1] //1 side is in order
+// [4,5,6,0,1,2] //both side in order
+// [5,6,0,1,2,3,4] //1 side is in order
+
+function search(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+
+    if (arr[mid] === target) {
+      return mid;
+    } else if (arr[left] <= arr[mid]) {
+      if (target < arr[mid] && target >= arr[left]) {
+        right = mid - 1;
+      } else {
+        left = mid + 1;
+      }
+    } else {
+      if (target > arr[mid] && target <= arr[right]) {
+        left = mid + 1;
+      } else {
+        right = mid - 1;
+      }
+    }
+  }
+  return -1;
+}
+
+/*
+Time Complexity - O(logN) - binary search, takes the array of nums and search only through half of it at every step
+
+Space Complexity O(1)
+*/
