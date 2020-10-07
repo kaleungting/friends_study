@@ -3,7 +3,7 @@
 [1,2,3]
 first start of with empty set
 start branching with the first element  [], [1],[1,2],[1,2,3],[1,3]
-    -keep adding to the end, at it to subset,
+    -keep adding to the end, add it to subset,
     -then backtrack by popping to see if there were unvisited sets
 then come back to empty [], branch second element [2],[2,3]
 then come back to empty [], branch third element [3]

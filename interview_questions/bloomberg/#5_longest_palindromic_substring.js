@@ -1,0 +1,15 @@
+/* pseudocode
+
+
+
+
+
+*/
+
+
+function longestPalindrome(s){
+
+
+
+
+}

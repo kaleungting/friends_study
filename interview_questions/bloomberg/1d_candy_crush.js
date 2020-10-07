@@ -58,3 +58,16 @@ Space Complexity - O(N), at most returning the same string
 
 
 */
+
+console.log(candyCrush("aaabbbc")); // "c"
+console.log(candyCrush("aabbbacd")); // "cd"
+console.log(candyCrush("aabbccddeeedcba")); // ""
+console.log(candyCrush("aaabbbacd")); //"acd"
+console.log(candyCrush("aaaaawefbbbffaasbtrcd")); //"weaasbtrcd". Covers greedy approach
+
+/*
+create a stack that keeps track of char and freq
+iterate through string
+  take a look at the last char
+
+*/

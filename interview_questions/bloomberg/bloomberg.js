@@ -189,45 +189,6 @@ function threeSum(nums) {
   return result;
 }
 
-function addTwoNumbers(l1, l2) {
-  let newList = new ListNode("dummy");
-
-  let p1 = l1;
-  let p2 = l2;
-  let p3 = newList;
-
-  let carry = 0;
-  while (p1 || p2) {
-    let val1 = p1 === null ? 0 : p1.val; //if one number is longer than the other, then you want to make sure it has a placeholder of 0
-    let val2 = p2 === null ? 0 : p2.val;
-    let val = val1 + val2 + carry; //incase it goes over 10, then you would want to add the previous carry into the value
-    if (val >= 10) {
-      carry = 1;
-      val = val % 10;
-    } else {
-      carry = 0;
-    }
-
-    let newNode = new ListNode(val);
-    p3.next = newNode;
-    p3 = p3.next;
-
-    if (p1 !== null) {
-      p1 = p1.next;
-    }
-    if (p2 !== null) {
-      p2 = p2.next;
-    }
-  }
-  if (carry === 1) {
-    //if there is a lingering carry, we put the 1 in the front;
-    let newNode = new ListNode(1);
-    p3.next = newNode;
-  }
-
-  return newList.next;
-}
-
 // function exponent1(b, n, cache) {
 //   if (n < 1) return 1;
 //   let memo = {};

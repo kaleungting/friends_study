@@ -31,4 +31,5 @@ if the biggest element, q[0] is the same as the end of the window, then you remo
 
 */
 
+
 console.log(slidingWindowMax([1, 3, -1, -3, 5, 3, 6, 7], 3));

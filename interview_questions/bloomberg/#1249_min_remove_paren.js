@@ -40,7 +40,7 @@ function minRemoveToMakeValid(s) {
   return newStr;
 }
 
-// console.log(minRemoveToMakeValid("lee(t(c)o)de)"));
+console.log(minRemoveToMakeValid("lee(t(c)o)de)"));
 
 /*
 Time Complexity: O(N) - three separate iterations, at most each through the length of the string. 
