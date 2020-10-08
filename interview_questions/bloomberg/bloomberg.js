@@ -118,24 +118,6 @@ function isAnagram(s1, s2) {
 
 // console.log(isAnagram("banana", "anabna"));
 
-function validTriangle(arr) {
-  let counter = 0;
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      let k = j + 1;
-      if (arr[i] + arr[j] > arr[k]) {
-        counter += 1;
-      } else {
-        break;
-      }
-    }
-  }
-  return counter;
-}
-
-// console.log(validTriangle([2, 3, 5, 7]));
-// [2,3,5,7] => [3,5,7] => 1
-
 function lengthOfLongestSubstring(s) {
   let l = 0,
     longest = 0,
@@ -188,25 +170,6 @@ function threeSum(nums) {
 
   return result;
 }
-
-// function exponent1(b, n, cache) {
-//   if (n < 1) return 1;
-//   let memo = {};
-//   if (memo[n]) {
-//     return memo[n];
-//   } else {
-//     memo[n] = exponent1(b, n, memo);
-//   }
-//   return memo[n - 1] * n;
-// }
-
-// function exponent2(b, n) {
-//   if (n < 1) return 1;
-//   return exponent2(b, n - 1) * n;
-// }
-
-// console.log(exponent1(2, 4));
-// // console.log(exponent2(2, 500));
 
 function balancedBST(arr) {
   if (arr.length === 0) return;
