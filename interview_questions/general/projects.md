@@ -4,6 +4,7 @@ Rater App
         - fullstack, created a backend database through ruby on rails and seeing it connect to the frontend through react/redux;
         - Create, Read, Update, Delete business reviews
     cons:
+        -
     why: allowed, me to use Google API, AWS to store a ton of photos, full CRUD capabilities allowing me to use SQL queries to filter restaurants by price/food category, etc. it was a very involved fullstack project (2 weeks)
     - cloning a website that i liked definitely helped me appreciate all of the little details that i didnt know as a user on the other end
 
@@ -11,7 +12,7 @@ Hyped Clothing
     pros:
         - stripe API, learning a new api is fun
         - google firebase authentication - created the whole userAuth on Rater, but learned how to recreate something super quickly using a new technology
-      - 
+  
     cons:
     why: it was a project i took on outside of appacademy to pursuit more advance technology and coding practice, to learn modern react technology such as react hooks, selectors, styled components
         benefits of react hooks - readability and reusability (it makes code more dry and worry less about the different lifecycle of a component)
