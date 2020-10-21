@@ -1,57 +1,39 @@
 /*
-if chars length is 0, return 0;
-create a sliding window
-keep track of current character - starts at char[0]
-have a counter that starts at 0;
+have a sliding window of i and j, 
+
+i is the start of a character, j will iterate until it hits a different character
+once it hits a different character, the amount of time it appears is just (j-i)
+set the chars[index] to equal to chars[i] and increment index after since it just took up a spot
+
+if count is greater than 1, then you need to replace the next letters with the count, but count is a integer, so you would need to convert it to a string
+
+if the string of count is longer than 1, i.g. "12", "203", then you would need to iterate through the string of count and replace chars[index] with the char at count, increment index
+
+reset i = j, since you are finished with this letter and now you'll start checking for the next character
+
+return index (which is the length of the new compressed group)
 
 */
 
-var compress = function (chars) {
-  if (!chars.length) return 0;
-  let l = 0;
-  let cur = chars[0];
-  let counter = 0;
-  for (let r = 0; r <= chars.length; r++) {
-    if (chars[r] === cur) {
-      counter++;
-    } else {
-      chars[l] = cur;
-      if (counter > 1) {
-        const s = counter.toString();
-        for (let k = 0; k < s.length; k++) {
-          chars[(l += 1)] = s[k];
-        }
-      }
-      l++;
-      cur = chars[r];
-      counter = 1;
-    }
-  }
-  return r;
-};
-
-
 function compress(chars){
-    let indexRes = 0, index = 0;
+    let index = 0, i = 0;
 
-    while(index < chars.length){
-        let curr = chars[index];
+    while (i < chars.length){
+        let j = i;
+        while (j < chars.length && chars[i] === chars[j])j++;
 
-        let count = 1;
-        while ( index + 1 < chars.length && chars[index + 1] === curr){
-            index++;
-            count++;
-        }
-
-        chars[indexRes++] = curr;
+        chars[index] = chars[i];
         index++;
-        if (count === 1) continue;
-        let string = count.toString();
-
-        for (let i = 0; i < string.length; i++){
-            chars[indexRes++] = string[i];
+        if (j - i > 1){
+            let count = (j-i).toString();
+            for (let i = 0; i < count.length; i++){
+                chars[index] = count[i];
+                index++;
+            }
         }
+
+        i = j;
     }
-    return indexRes;
+    return index;
 
 }
