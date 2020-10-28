@@ -26,7 +26,7 @@ var reverseBetween = function (head, m, n) {
   } else {
     head = prev; // it means you dont have any nodes in the beginning, and head is prev
   }
-  x;
+
   tail.next = curr; //connect the tail with the rest of the nodes, where you left off (curr)
   return head;
 };

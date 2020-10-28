@@ -8,7 +8,7 @@
 
 
 */
-function topKFrequent(words, k) {
+function topKFrequent(words, k) {  
   let tracker = {};
   for (let i = 0; i < words.length; i++) {
     tracker[words[i]] = tracker[words[i]] ? tracker[words[i]] + 1 : 1;

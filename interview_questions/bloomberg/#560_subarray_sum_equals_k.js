@@ -13,7 +13,7 @@ var subarraySum = function (nums, k) {
 
     map[sum] = map[sum] ? map[sum] + 1 : 1;
   }
-  return count;
+  return count; 
 };
 
 /*
