@@ -83,3 +83,29 @@ iterate from where i = start to the rest of the digits 9+1
 
 
 */
+
+
+
+function combinationSum(k,n){
+  let results = [];
+
+  backtrack(num, remainLeft, sumLeft, combo){
+    if (remainLeft < 0 || sumLeft < 0) return;
+
+    if (remainLeft === 0 && sumLeft === 0) {
+      results.push([...combo]);
+      return;
+    }
+
+    for (let i = num; i < 10; i++){
+      combo.push(i);
+      //i+1 because you dont wanna double count, 
+      //remainLeft -1 since you're using up one number
+      //sumLeft - i, since you want to get up to ZERO
+      backtrack(i+1, remainLeft - 1, sumLeft - i, combo);
+      combo.pop();
+    }
+  }
+  backtrack(1, k, n, []);
+  return results;
+}

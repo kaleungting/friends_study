@@ -10,17 +10,15 @@ var minMeetingRooms = function (intervals) {
   start = start.sort((a, b) => a - b);
   end = end.sort((a, b) => a - b);
 
-  let startPt = 0,
-    endPt = 0;
+  let endPt = 0;
   let usedRoom = 0;
-  while (startPt < intervals.length) {
-    if (start[startPt] >= end[endPt]) {
-      usedRoom--;
+
+  for (let startPt = 0; startPt < start.length; startPt++) {
+    if (start[startPt] < end[endPt]) {
+      usedRoom++;
+    } else {
       endPt++;
     }
-
-    usedRoom++;
-    startPt++;
   }
 
   return usedRoom;
@@ -37,16 +35,10 @@ iterate through the intervals,
 create an object for start time, sort
 create an object for end time, sort
 
-iterate through startPt, until length of arr,
-    if startPt is greater than endPt,then you know a room is not needed, because you can use the room that just ended
-        - decrement the need for a usedroom
-        - move end Pter
-
-    increment usedRoom, (b/c you'll need to open a new room to fit starting time )
-    increment starting pointer
-
+iterate through start times, comparing start time with end time, if it is smaller than end time, then you need a room
+else 
+increase the endPter
 */
-
 
 /*
 Time Complexity - O(N) - iterate through the lengths of the array
