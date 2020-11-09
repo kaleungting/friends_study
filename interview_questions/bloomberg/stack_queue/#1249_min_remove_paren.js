@@ -11,7 +11,7 @@
 
 function minRemoveToMakeValid(s) {
   let stack = [];
-  let tracker = new Set();
+  let stuffToDelete = new Set();
   for (let i = 0; i < s.length; i++) {
     if (s[i] === "(") {
       stack.push(i);
@@ -19,7 +19,7 @@ function minRemoveToMakeValid(s) {
 
     if (s[i] === ")") {
       if (stack.length === 0) {
-        tracker.add(i);
+        stuffToDelete.add(i);
       } else {
         stack.pop();
       }
@@ -27,13 +27,12 @@ function minRemoveToMakeValid(s) {
   }
 
   for (let i = 0; i < stack.length; i++) {
-    tracker.add(stack[i]);
+    stuffToDelete.add(stack[i]);
   }
-  console.log(tracker);
 
   let newStr = "";
   for (let i = 0; i < s.length; i++) {
-    if (!tracker.has(i)) {
+    if (!stuffToDelete.has(i)) {
       newStr += s[i];
     }
   }

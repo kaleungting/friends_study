@@ -7,7 +7,10 @@ Rater App
         -
     why: allowed, me to use Google API, AWS to store a ton of photos, full CRUD capabilities allowing me to use SQL queries to filter restaurants by price/food category, etc. it was a very involved fullstack project (2 weeks)
     - cloning a website that i liked definitely helped me appreciate all of the little details that i didnt know as a user on the other end
-
+    - Rails ActiveRecord Query - applying it on the backend to use SQL statements to filter results
+      - a lot of different queries running on top of each other %downcase% to make sure search bar works
+        - name, location, price_range, and then also map boundaries
+        - created functions that utilized activerecord query on the Models, and then passing it onto the Controller to filter out results that are passed onto the frontend
 Hyped Clothing
     pros:
         - stripe API, learning a new api is fun

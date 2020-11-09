@@ -24,7 +24,7 @@ Input: costs = [[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,
 Output: 3086 */
 
 function twoCitySchedCost(costs) {
-  costs = costs.sort((a, b) => (b[1] - b[0]) - (a[1] - a[0]));
+  costs = costs.sort((a, b) => a[0] - b[0] - (a[1] - b[1]));
   let total = 0;
   for (let i = 0; i < costs.length; i++) {
     total += i < costs.length / 2 ? costs[i][0] : costs[i][1];
@@ -34,6 +34,10 @@ function twoCitySchedCost(costs) {
 
 /*
 sort by the opportunity cost of going from one city to the other
+compare it with the opportunity cost to A sort it,
+sort it based on the opportunity cost to fly to A, 
+-170, -10, 10, 350
+send first half to A second half to B
 
 [[10,20],[30,200],[400,50],[30,20]]
    -10, -170, 350, 10
@@ -45,6 +49,12 @@ sort by the opportunity cost of going from one city to the other
 first half should be sent to A
 second half should be sent to B
 
+
+
+
+send all people to city A, find total cost,
+then find out how much we could have saved by flying to B, get this by finding the difference between B-A
+sort that, and subtract half to send to A
 
 
 

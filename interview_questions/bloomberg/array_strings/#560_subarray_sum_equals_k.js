@@ -1,3 +1,43 @@
+/*
+====================================================================
+BETTER SOLUTION - easier to understand
+====================================================================
+
+you want to use a tracker to keep tracker of the sum at a certain point up to where you've iterated
+
+as you iterate along, you increase the frequency of currSum by 1
+  if currSum is equal to the target, you can just add the counter by 1
+
+  if tracker - k is something we've seen before, then up until that point, we add the number of time we've seen that difference
+
+  add currSum to tracker and increase it's freq
+
+
+*/
+
+var subarraySum = function (nums, k) {
+  let tracker = {};
+  let counter = 0;
+  let currSum = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    currSum += nums[i];
+
+    if (currSum === k) {
+      counter += 1;
+    }
+
+    if (tracker[currSum - k]) {
+      counter += tracker[currSum - k];
+    }
+
+    tracker[currSum] = (tracker[currSum] || 0) + 1;
+  }
+  return counter;
+};
+
+
+
 var subarraySum = function (nums, k) {
   let count = 0,
     sum = 0;
