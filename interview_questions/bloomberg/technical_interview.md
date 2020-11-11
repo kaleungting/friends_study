@@ -8,7 +8,7 @@ What is a call stack?
 asynchronous -
     - you do not have to wait for the program/function to finish running to start something up
     - promises allow you to set an operation running and then wait until the result has returned before running another operation
-    - this means, you can register functions that should not be executed synchronously and should instead be invoked asyncrhronously when some kind of events
+    - this means, you can register functions that should not be executed synchronously and should instead be invoked asynchronously when some kind of events
     occur, such as mouseclick, fetch data, passage of time. this means you can let your code do several things at the same time without stopping main thread
 
     EXAMPLE: if you are loading restaurants onto a webpage like yelp, you want the header footer, and the rest of the page to load up already, since fetching restaurants from the database will take up time. you dont want to have to wait for the database in order to render stuff you already have.

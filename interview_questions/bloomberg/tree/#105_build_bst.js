@@ -58,23 +58,3 @@ function buildTree(preorder, inorder) {
 
   return helper(0, inorder.length - 1);
 }
-
-function returnSumOfOdd(n) {
-  let total = 0;
-  if (n < 1) return 0;
-
-  for (let i = 1; i < n; i++) {
-    if (i % 2 !== 0) {
-      total += i;
-    }
-  }
-
-  return total;
-}
-total = 1 + 3 + 5 = 9;
-1 === 1;
-2;
-3;
-4;
-i = 5;
-i = 6;
