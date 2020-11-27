@@ -37,7 +37,7 @@ function lengthOfLongestSubstring(s) {
       l = tracker[letter] + 1;
       count = r - tracker[letter];
     } else {
-      maxCount = Math.max(maxCount, (count += 1));
+      maxCount = Math.max(maxCount, ++count);
     }
 
     tracker[letter] = r;

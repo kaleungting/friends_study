@@ -57,12 +57,12 @@ Time Complexity - O(N) - the length of the str at most
 Space Complexity - O(N), at most returning the same string
 
 */
-
-console.log(candyCrush("aaabbbc")); // "c"
-console.log(candyCrush("aabbbacd")); // "cd"
-console.log(candyCrush("aabbccddeeedcba")); // ""
-console.log(candyCrush("aaabbbacd")); //"acd"
-console.log(candyCrush("aaaaawefbbbffaasbtrcd")); //"weaasbtrcd". Covers greedy approach
+console.log(stringCrush("aabbccddeeedcba"));
+// console.log(candyCrush("aaabbbc")); // "c"
+// console.log(candyCrush("aabbbacd")); // "cd"
+// console.log(candyCrush("aabbccddeeedcba")); // ""
+// console.log(candyCrush("aaabbbacd")); //"acd"
+// console.log(candyCrush("aaaaawefbbbffaasbtrcd")); //"weaasbtrcd". Covers greedy approach
 
 /*
 create a stack that keeps track of char and freq
@@ -76,9 +76,8 @@ function candyCrush(s) {
 
   for (let i = 0; i < s.length; i++) {
     if (stack.length && stack[stack.length - 1][0] === s[i]) {
-      let freq = stack[stack.length - 1][1] + 1;
-      stack.pop();
-      stack.push([s[i], freq]);
+      stack[stack.length - 1][1] += 1;
+
       if (freq >= 3 && s[i + 1] !== stack[stack.length - 1][0]) {
         stack.pop();
       }
@@ -93,8 +92,8 @@ function candyCrush(s) {
   return word;
 }
 
-console.log(candyCrush("aaabbbc")); // "c"
-console.log(candyCrush("aabbbacd")); // "cd"
-console.log(candyCrush("aabbccddeeedcba")); // ""
-console.log(candyCrush("aaabbbacd")); //"acd"
-console.log(candyCrush("aaaaawefbbbffaasbtrcd")); //"weaasbtrcd". Covers greedy approach
+// console.log(candyCrush("aabbccddeeedcba")); // "c"
+// console.log(candyCrush("aabbbacd")); // "cd"
+// console.log(candyCrush("aabbccddeeedcba")); // ""
+// console.log(candyCrush("aaabbbacd")); //"acd"
+// console.log(candyCrush("aaaaawefbbbffaasbtrcd")); //"weaasbtrcd". Covers greedy approach

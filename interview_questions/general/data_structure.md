@@ -10,3 +10,12 @@ Array of Buckets
     - fast
 
 It takes an input, hashes it and converts it into an integer used as an index to place in the buckets.
+
+
+Hashing Algorithm -> transfer key to index
+SUM of ASCII code, modulo by length of array
+
+open addressing -> if there is a collision, find a free space to fill the key
+
+-resizable hashtable, based on load factor 
+- linkedlist to address collision

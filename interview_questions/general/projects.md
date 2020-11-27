@@ -17,7 +17,7 @@ Hyped Clothing
         - google firebase authentication - created the whole userAuth on Rater, but learned how to recreate something super quickly using a new technology
   
     cons:
-    why: it was a project i took on outside of appacademy to pursuit more advance technology and coding practice, to learn modern react technology such as react hooks, selectors, styled components
+    why: it was a project i took on outside of appacademy to pursue more advance technology and coding practice, to learn modern react technology such as react hooks, selectors, styled components
         benefits of react hooks - readability and reusability (it makes code more dry and worry less about the different lifecycle of a component)
         benefits of selectors - it memoizes mapStateToProps, so it doesn't recomputes every time a state that doesn't involve them changes. it optimizes the project
             - i could have benefitted from learning this earlier during my Fullstack Yelp Project, since i dont think it's fully optimize and i have a huge database of restaurants/reviews stored in it. 
@@ -33,7 +33,7 @@ Zoe
         - project manager experience (we all had our own roles, I was backend engineer, connected Spoonacular API and stored data into MongoDB)
         - it was a bit hectic at first since it was everyone's first time working on an app as a team, so I used Asana to manage the project and assigned tasks to make the workflow more efficient
     cons:
-        - 
+        - difficult time - our project leader didnt have much experience leading a tech project. so i had to introduce him to Asana and walk him through how to use it.
 
 Things i would have done differently
     - research on newer technology, chances are as time goes on, newer technology will make life simpler and code easier to write
@@ -48,3 +48,5 @@ The Giving Grape -
       - taught me the importance of documentation and commenting as you code so it becomes more readable and reusable for you and for the next person
     - Asana to keep track of tasks;
       - was a good way to distribute work and keep everyone accountable;
+
+

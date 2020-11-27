@@ -120,3 +120,4 @@ let purple = new Bird(10000, "purple", "dirty");
 purple.hygiene = "clean";
 purple.leg = 1000;
 console.log(purple);
+

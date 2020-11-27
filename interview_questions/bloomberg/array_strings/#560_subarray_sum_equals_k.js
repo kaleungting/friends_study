@@ -16,7 +16,7 @@ as you iterate along, you increase the frequency of currSum by 1
 */
 
 var subarraySum = function (nums, k) {
-  let tracker = {};
+  let tracker = {0:1};
   let counter = 0;
   let currSum = 0;
 
@@ -51,7 +51,7 @@ var subarraySum = function (nums, k) {
       count += map[sum - k];
     }
 
-    map[sum] = map[sum] ? map[sum] + 1 : 1;
+    map[sum] = (map[sum] || 0) + 1;
   }
   return count; 
 };

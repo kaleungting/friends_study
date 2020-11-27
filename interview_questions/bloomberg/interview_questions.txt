@@ -1,0 +1,60 @@
+What is Bloomberg?
+Financial market information platform that services clients into helping them make business decisions
+
+What are you looking for in your next role?
+3 things i look for in my next role
+    - be in a company or a team that cultivates a learning environment
+      - i do understand that i come from a non traditional software engineering background
+      - i want to be able to demonstrate my willingness to learn and it's important for my next role at any company to support an environment like that
+    - collaborative environment
+      - in addition, being able to work in a cohesive unit is very important, working at TGG as a software engineer and through the group project at AppAcademy i realized more than ever how important it is for the team 
+    - career growth and upward trajectory
+      - as much as I am willing to put in the time/hours for a company, i want to see that have a good return on investment for my career growth, and being in a role where there's a good balance of that is important to me
+
+
+Why Bloomberg?
+    - first exposure to bloomberg was when i was working on the trading floor during my rotational program at BNYM
+      - the 80s black and orange, and the colorful keyboard
+    - second exposure was when I was at AppAcademy, and I spoke with some alumnis and they talked about how bloomberg really cultivated a learning environment and how they help their software engineers grow.
+    - and as i got further along the interview process, i spoke with others who interviewed at the company and they all talked about how collaborative the experience felt, and i think that translates really well into what the work environment will be. and that's something that drew me more and more towards the role and the company
+    - competitive wage
+
+Bloomberg University and Guilds - good way to continue learning and pursuing passion that will help me grow within the company
+
+Guilds - 10 guilds across its Engineering Department
+-Internal presentations and meetups
+-Engineering Influence
+-Collaborative development
+-Conference engagement
+
+
+Bloomberg Terminal - not US focused, has news articles related to the ticker, charting
+
+==================
+QUESTIONS TO ASK
+==================
+1. One of the values at Bloomberg is Innovation. Bloomberg has been a company that's been around for just about 39 years... how have you seen the company pledge its value and continue its pursue for innovation??
+  - read the UX article on Bloomberg Mobile App - springboard -> editable menu -> quick access menu list
+2. Why bring on new SWE?
+3. How is the onboarding process? how is mentorship and getting familiar with the code base?
+4. what type of technologies do you use? what languages? frameworks? tools? eg. IDEs and can I use my fave IDE-- version control
+5. What practices do you follow? is it agile? if yes, when are your standups and how long are they? how long are the sprints
+6. as far as i understand, junior engineers start by being told what to implement from requirements given by senior devs, how does bloomberg help someone from just being a coder to take them to a point where they themselves architect a solution
+7. if there is something i want to take on, are there opportunities to be given a go ahead to build credibility in my role?
+8. whats your advice to an engineer starting his/her career today
+9. what do u like most about bloomberg and whats your favorite memory
+10. whats the relationship between a manager and a young talent
+11. how can you describe the work culture
+12. how has being remote been working for you and does bloomberg consider adopting it
+13. what's one thing you liek about the company and what's one thing you would want to change
+14. based on our conversation what are some of the reasons why you wouldnt hire me
+
+
+Behavioral - 
+
+What are you passionate about? 
+- self improvement and learning
+  - after i left my job, last year -> i booked a one way flight ticket to australia. knowing that, i had 1 month to learn how to swim, i enrolled myself to the Y, watched youtube videos and learned how to swim in two weeks.
+  - im a short guy, a lot of clothes dont fit me, i bought a sewing machine and learned how to tailor clothes on youtube. 
+  - to me, i always invest in myself, learning how to code is similar
+

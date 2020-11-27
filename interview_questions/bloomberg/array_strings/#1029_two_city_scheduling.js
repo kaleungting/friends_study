@@ -24,7 +24,7 @@ Input: costs = [[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,
 Output: 3086 */
 
 function twoCitySchedCost(costs) {
-  costs = costs.sort((a, b) => a[0] - b[0] - (a[1] - b[1]));
+  costs = costs.sort((a, b) => a[0] - a[1] - (b[0] - b[1]));
   let total = 0;
   for (let i = 0; i < costs.length; i++) {
     total += i < costs.length / 2 ? costs[i][0] : costs[i][1];
