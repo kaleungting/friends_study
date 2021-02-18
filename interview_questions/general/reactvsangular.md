@@ -21,3 +21,8 @@ React - view library
 - barrier of entry lower
 - one way data banding
 
+
+
+ONE WAY BINDING vs TWO WAY BINDING
+- two way binding automatically updates as the view changes in the html
+- one way binding only binds the value of the model to view
