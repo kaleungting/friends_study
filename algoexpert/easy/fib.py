@@ -15,7 +15,7 @@ def getNthFibOpt(n, cache={}):
     if n in cache:
         return cache[n]
     else:
-        cache[n] = getNthFib(n-1, cache) + getNthFib(n-2, cache)
+        cache[n] = getNthFibOpt(n-1, cache) + getNthFibOpt(n-2, cache)
 
     return cache[n]
 
@@ -34,4 +34,4 @@ def getNthFibSub(n):
     if n <= 2:
         return n-1
 
-    return getNthFib(n-1) + getNthFib(n-2)
+    return getNthFibSub(n-1) + getNthFibSub(n-2)
