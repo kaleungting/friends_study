@@ -4,6 +4,9 @@ gets pushed to the end so we never have to look at the last number again
 
 using counter to check
 
+SPACE = O(1)
+TIME = O(N^2)
+
 """
 
 
