@@ -4,7 +4,12 @@ Helped build the organization from the ground up
 
 - In-house verification process
   - sendgrid email validation was too expensive
+    - would have costed extra $90 per month
   - so we decided to build an inhouse process
+    - creating an two extra columns to the users as they built an account that randomizes a string
+    - sends an email with that string to the user
+    - the user then has to go on our website and type the string they see in order to activate their accounts
+
   
 
 - Categories Filter
