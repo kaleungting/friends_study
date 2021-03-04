@@ -1,0 +1,20 @@
+Structured Data - quantitative
+- relational database
+- includes information that connects with each other
+- can input, search and be manipulated quickly
+- SQL
+
+Unstructured Data - qualitative
+- no predefined model, cannot be organized in relational database (non-relationsl, NoSQL)
+    (text, audio, videos)
+
+SQL vs NonSQL
+
+SQL - rigid complex, tabular schemas, expensive scaling
+-tables
+-vertical scaling
+
+NonSQL - lighter, scaling, faster queries, application change
+-json, kv pairs, graphs
+-horizontal scaling
+-flexible schemas and data models

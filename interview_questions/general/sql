@@ -1,0 +1,20 @@
+INNER JOIN shows matching entries on both of the table, it excludes if it doesnt
+
+
+LEFT JOIN shows all of the record from the FROM table but not from the joined table
+    - keeps whatever is on the left side (KEEPS TBLCOUNTRY)
+    SELECT * FROM TBLCOUNTRY 
+    LEFT JOIN TBLESTATE 
+    ON 
+    TBLCOUNTRY.CountryId = TBLSTATE.CountryId
+
+
+RIGHT JOIN - keeps whatever is on the right table (the joined table)
+- keeps all records on TBLSTATE
+    SELECT * FROM TBLCOUNTRY 
+    RIGHT JOIN TBLESTATE 
+    ON 
+    TBLCOUNTRY.CountryId = TBLSTATE.CountryId
+
+FULL OUTER JOIN - INNER JOIN + LEFT JOIN + RIGHT JOIN
+- includes all records (and includes non matching too)
